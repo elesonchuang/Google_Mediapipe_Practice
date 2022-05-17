@@ -1,6 +1,7 @@
 # gRPC-with-protobuf
 
 ## How to run
+- Test on Nvidia Jetson Nano 2GB Developer Kit with PiCamera V2
 - Install project dependencies
 ```bash
 # Install protobuf compiler
@@ -18,10 +19,14 @@ $ make
 ```
 - Start the gRPC service
 ```bash
-$ python3 server.py --ip 0.0.0.0 --port 8080
+$ python3 server.py 
 ```
 - Start the gRPC client
 ```bash
-# You will get 55 value computed by the grpc service
-$ python3 client.py --ip localhost --port 8080 --order 10
+$ python3 client.py 
 ```
+  - You should see
+  ```bash
+  Choose operate mode as you wish...
+  ```
+  Type 1 | 2 | 3 to choose mode "object" | "hand" | "pose" or type "exit" to leave.
